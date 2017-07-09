@@ -5,9 +5,11 @@
 
 Directories are divided into related tasks.
 
-### set-up-install/
+### installation-set-up/
 
-Set up and install instructions and guidelines.
+Installation and set up instructions and guidelines.
+
+---
 
 ## Recommendations
 
@@ -23,15 +25,7 @@ There exist foundational shell solutions within the application layer to increas
 * [Return a file for a command using one of two search methods: 1. locate; 2. recursion.](https://github.com/linux-shell-base/linux-shell-base/blob/master/bin/modules/file/returnfileforcmd)
 * [Execute a command and an action on the resulting window.](https://github.com/linux-shell-base/linux-shell-base/blob/master/bin/modules/x11/execmdandwindact)
 
-#### Bash utility functions
-
-* [(all)](https://github.com/linux-shell-base/linux-shell-base/tree/master/bin/bash_utilities#bash_utilities)
-
 #### Solutions for core aspects of the Linux operating system *(file, hardware, networking, x11, etc.)*
-
-##### ... without output
-
-* [Move a window to the left or right monitor.](https://github.com/linux-shell-base/linux-shell-base/blob/master/bin/main-no_output/x11/movewindtolftorrghtmntr)
 
 ##### ... modules
 
@@ -42,6 +36,10 @@ There exist foundational shell solutions within the application layer to increas
 ##### ... as single-value for other programs
 
 * [(X11 - all)](https://github.com/linux-shell-base/linux-shell-base/tree/master/bin/output-single-value#x11)
+
+#### Bash utility functions
+
+* [(all)](https://github.com/linux-shell-base/linux-shell-base/tree/master/bin/bash_utilities#bash_utilities)
 
 
 
