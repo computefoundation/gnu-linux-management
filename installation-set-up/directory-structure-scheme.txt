@@ -34,3 +34,4 @@ Scripts should then be placed in /home/<user>/bin and all other files in the res
 
 To divide scripts loaded in .bash_profile and .bashrc, a good solution is to place the scripts loaded in .bashrc in
 /home/<user>/bin and the scripts loaded in .bash_profile in /usr/local/bin.
+
