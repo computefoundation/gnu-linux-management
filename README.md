@@ -3,12 +3,16 @@
 <br><br><br><br>
 
 **Documentation** is a resource of guidelines for Linux with respect to the foundation of computing.
-<br><br><br><br><br>
+<br><br><br><br><br><br>
 
-# installation-set-up/
+# Installation
 
-Installation and set up instructions and guidelines.
+Installation guidelines
 
-* [**arch-linux-install-guide.txt**](arch-linux-install-guide.txt): An easy to follow beginner's Arch Linux installation guide.
+* [An easy to follow beginner's Arch Linux installation guide.](installation/arch-linux-install-guide.txt)
 
-* [**directory-structure-scheme.txt**](directory-structure-scheme.txt): A basic guideline for setting up a directory hierarchy for scripts using a UNIX-founded approach.
+# System set up
+
+System set up guidelines
+
+* [A basic guideline for setting up a directory hierarchy for scripts using a UNIX-founded approach.](system-set-up/directory-structure-scheme.txt)
