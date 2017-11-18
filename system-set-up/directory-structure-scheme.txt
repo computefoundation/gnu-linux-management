@@ -1,26 +1,36 @@
 
-A directory structure scheme for user and system scripts based on the UNIX methodology.
+A guide for creating a directory structure scheme for user scripts based on the UNIX methodology.
 
-There are few different aspects of the Linux operating system to consider when loading files. In regards to user scripts,
-there are two aspects to consider:
+=================================================================================================================
+
+=======================================
+   Loading files
+=======================================
+
+There are few different aspects of the GNU/Linux operating system to consider when loading files. In regards to user scripts,
+there are only to files to consider:
 
   1. Bash profile (.bash_profile): Scripts loaded for a login shell.
   2. Bash runtime configuration (.bashrc): Scripts loaded for an interactive non-login shell.
 
 To use scripts stored in a directory, the directory must be added to the PATH environment variable. This can be done
-either in .bash_profile or .bashrc. Which one is used makes a significant difference for X11 (i.e. graphical user
-interface) users (the majority). Scripts loaded in .bash_profile will be available within the entire X11 protocol (i.e.
-throughout the window manager, in other applications, new processes, etc.). Scripts loaded in .bashrc will only be
-available in the terminal (unless explicitly sourced in the needed process).
+either in .bash_profile or .bashrc.
 
-The question for the user is how and where should scripts be stored. There are primarily only two directories to
-consider:
+Which one is used makes a significant difference for X11 (i.e. graphical user nterface) users. Scripts loaded in
+.bash_profile will be available within the entire X11 protocol (i.e. throughout the window manager, in other
+applications, new processes, etc.). Scripts loaded in .bashrc will only be available in the terminal (unless
+explicitly sourced in the needed process).
+
+=======================================
+   Storing files
+=======================================
+
+The main question for the user is shere should scripts be stored. There are primarily only two directories to consider:
 
   1. /home/<user>
   2. /usr/local
 
-It is recommended to follow the UNIX architecture when creating a system of custom user scripts. To stay consistent with
-the UNIX directory hierarchy, the following directories should be created in /home/<user>:
+To stay consistent with the UNIX methodology, the following directories should be created in /home/<user>:
 
   * /home/<user>/bin
   * /home/<user>/tmp

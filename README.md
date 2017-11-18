@@ -15,7 +15,7 @@ Installation guides
 
 System set up guides
 
-* [Set up intructions for creating a directory structure scheme for user scripts based on the UNIX methodology.](system-set-up/directory-structure-scheme.txt)
+* [A guide for creating a directory structure scheme for user scripts based on the UNIX methodology.](system-set-up/directory-structure-scheme.txt)
 
 
 
