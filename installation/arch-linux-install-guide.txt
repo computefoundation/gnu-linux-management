@@ -1,16 +1,14 @@
 
-Installation and post-installation steps and commands for Arch Linux.
+An installation and post-installation guide for Arch Linux.
 
 This document is meant to make installation of Arch Linux as quick and simple as possible while still allowing all
 configurations of Arch Linux.
 
-Sections
-  1.  Installation
-  2.  Post-Installation
+=================================================================================================================
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   1.  INSTALLATION
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=======================================
+   Installation
+=======================================
 
 ++SYSTEM
 
@@ -153,9 +151,9 @@ Sections
     -Unmount /boot/efi and delete it:
         >  umount /boot/efi && rm -Rf /boot/efi
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   2.  POST-INSTALLATION
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=======================================
+   Post-installation
+=======================================
 
 ++PART 1: SYSTEM INITIALIZATION
 

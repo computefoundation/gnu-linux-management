@@ -1,4 +1,5 @@
-Directory structure scheme
+
+A directory structure scheme for user and system scripts based on the UNIX methodology.
 
 There are few different aspects of the Linux operating system to consider when loading files. In regards to user scripts,
 there are two aspects to consider:

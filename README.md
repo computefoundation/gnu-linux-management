@@ -9,7 +9,7 @@
 
 Installation guides
 
-* [Installation and post-installation steps and commands for Arch Linux.](installation/arch-linux-install-guide.txt)
+* [An installation and post-installation guide for Arch Linux.](installation/arch-linux-install-guide.txt)
 
 # System set up
 
