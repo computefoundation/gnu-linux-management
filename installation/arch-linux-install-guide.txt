@@ -1,7 +1,8 @@
-Arch Linux installation guide
 
-Installation and post-installation steps/commands for Arch Linux. This document is meant to make installation of Arch
-Linux as quick and simple as possible.
+Installation and post-installation steps and commands for Arch Linux.
+
+This document is meant to make installation of Arch Linux as quick and simple as possible while still allowing all
+configurations of Arch Linux.
 
 Sections
   1.  Installation
