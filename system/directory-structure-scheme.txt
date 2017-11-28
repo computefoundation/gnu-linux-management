@@ -1,7 +1,7 @@
 
-A guide for creating a directory structure scheme for user scripts based on the UNIX methodology.
+Set up instruction for a directory structure scheme based on the UNIX methodology.
 
-=================================================================================================================
+===========================================================================================================
 
 =======================================
    Loading files

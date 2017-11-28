@@ -5,10 +5,18 @@
 **Linux-system-base** is a resource of UNIX-based solutions for the GNU/Linux system.
 <br><br><br><br><br><br>
 
-# Installation and set up
+# Sections
 
-Installation and set up instructions
+These are all the solutions provided by Linux-system-base:
 
-* [An installation and post-installation guide for Arch Linux.](installation/arch-linux-install-guide.txt)
+## Installation
 
-* [A guide for creating a directory structure scheme for user scripts based on the UNIX methodology.](system-set-up/directory-structure-scheme.txt)
+Installation insturctions
+
+* [Installation and post-installation instructions for Arch Linux.](installation/arch-linux-install-guide.txt)
+
+## System
+
+System instructions
+
+* [Set up instruction for a directory structure scheme based on the UNIX methodology.](system/directory-structure-scheme.txt)

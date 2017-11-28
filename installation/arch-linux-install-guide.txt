@@ -1,10 +1,10 @@
 
-An installation and post-installation guide for Arch Linux.
+Installation and post-installation instructions for Arch Linux.
 
 This document is meant to make installation of Arch Linux as quick and simple as possible while still allowing all
 configurations of Arch Linux.
 
-=================================================================================================================
+===========================================================================================================
 
 =======================================
    Installation

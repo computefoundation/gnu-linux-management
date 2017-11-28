@@ -1,4 +1,4 @@
 
 # installation/
 
-This directory contains installation guidelines.
+Installation instructions text files.
