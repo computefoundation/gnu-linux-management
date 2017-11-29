@@ -14,7 +14,7 @@ These are the section of and solutions provided by Linux-os-base:
 
 Installation solutions
 
-* [Installation and post-installation instructions for Arch Linux.](installation/arch-linux-install-guide.txt)
+* [Simple installation and post-installation instructions for Arch Linux.](installation/arch-linux-install-instructions.txt)
 
 ## System
 

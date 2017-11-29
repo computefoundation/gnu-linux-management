@@ -1,8 +1,5 @@
 
-Installation and post-installation instructions for Arch Linux.
-
-This document is meant to make installation of Arch Linux as quick and simple as possible while still allowing all
-configurations of Arch Linux.
+Simple installation and post-installation instructions for Arch Linux.
 
 ===========================================================================================================
 
@@ -260,11 +257,9 @@ configurations of Arch Linux.
    -Enable Network Manager's service (run as root):
        >  systemctl enable NetworkManager.service && systemctl start NetworkManager.service
 
-++PART 5: DRIVER INSTALLATION
+++PART 5: DRIVER INSTALLATION (Examples only)
 
-  (Examples are provided for two WiFi adapters only; drivers that need to be installed must be found online).
-
-  ~~~~ TP-Link AC1200 WiFi Adapter
+  ~~~~ TP-Link AC1200 Wi-Fi Adapter
    -Install the Realtek 8812au chipset driver:
        >  yaourt -S --noconfirm rtl8812au
 
@@ -277,8 +272,7 @@ configurations of Arch Linux.
   ~~~~ Laptop touchpad (synaptics interface) not working
    -Run the following as root:
        >  pacman -S --noconfirm xf86-input-synaptics
-
-   -See the Arhc Linux synaptic wiki page for setting up the following file: /etc/X11/xorg.conf.d/50-synaptics.conf
+   -See the Arhc Linux synaptic wiki page on setting up the following file: /etc/X11/xorg.conf.d/50-synaptics.conf
 
   ~~~~ Sound not working
    -Create file "/etc/modprobe.d/alsa.conf" and add the following lines:
