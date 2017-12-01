@@ -23,7 +23,7 @@ System solutions
 
 # Contributing
 
-If you would like to contribute, please ensure that your contribution is correct, formatted consistently (a guideline will be provided in the future) and adheres to the Gnu-linux philosophy.
+If you would like to contribute, please ensure that your contribution is correct and formatted consistently (a guideline will be provided in the future).
 
 Credits will be placed in the wiki.
 
