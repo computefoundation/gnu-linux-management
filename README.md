@@ -1,13 +1,13 @@
 
-<img src='https://raw.githubusercontent.com/unix-foundation/home/images/linux-os-base_logo.png' width='32.2%' align='left' alt='linux-os-base_logo.png'>
-<br><br><br><br>
+<img src='https://raw.githubusercontent.com/unix-foundation/home/images/gnu-linux_logo.png' width='33.5%' align='left' alt='gnu-linux_logo.png'>
+<br><br><br>
 
-**Linux-os-base** is a resource of UNIX-founded solutions for the GNU/Linux operating system.
+**Gnu-linux** is a resource of UNIX-founded solutions for the GNU/Linux operating system.
 <br><br><br><br><br>
 
 # Sections
 
-These are the section of and solutions provided by Linux-os-base:
+These are the section of and solutions provided by Gnu-linux:
 
 ## Installation
 
@@ -23,7 +23,7 @@ System solutions
 
 # Contributing
 
-If you would like to contribute, please ensure that your contribution is correct, formatted consistently (a guideline will be provided in the future) and adheres to the Linux-os-base philosophy.
+If you would like to contribute, please ensure that your contribution is correct, formatted consistently (a guideline will be provided in the future) and adheres to the Gnu-linux philosophy.
 
 Credits will be placed in the wiki.
 
