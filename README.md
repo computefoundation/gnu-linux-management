@@ -1,9 +1,8 @@
 
-<img src='https://raw.githubusercontent.com/unix-base/home/images/linux-os-base_logo.png' width='32.2%' align='left' alt='linux-os-base_logo.png'>
+<img src='https://raw.githubusercontent.com/unix-foundation/home/images/linux-os-base_logo.png' width='32.2%' align='left' alt='linux-os-base_logo.png'>
 <br><br><br><br>
 
-**Linux-os-base** is a resource of UNIX-based solutions for the  
-GNU/Linux operating system.
+**Linux-os-base** is a resource of UNIX-founded solutions for the GNU/Linux operating system.
 <br><br><br><br><br>
 
 # Sections
