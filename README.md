@@ -1,13 +1,13 @@
 
-<img src='https://raw.githubusercontent.com/unixfoundation/gnu-linux/images/logo.png' width='33.5%' align='left' alt='logo.png'>
+<img src='https://raw.githubusercontent.com/unixfoundation/gnu-linux-os/images/logo.png' width='33.5%' align='left' alt='logo.png'>
 <br><br><br>
 
-**Gnu-linux** is a resource of UNIX-founded solutions for the GNU/Linux operating system. It provides documentation for multiple areas of the GNU/Linux operating system to make these areas easily usable.
+**Gnu-linux-os** is a resource of Unix-founded solutions for the GNU/Linux operating system. It provides documentation for multiple areas of the GNU/Linux operating system to make these areas easily usable.
 <br><br><br><br>
 
 # Sections
 
-These are the section of and solutions provided by Gnu-linux:
+These are the section of and solutions provided by Gnu-linux-os:
 
 ## Installation
 
