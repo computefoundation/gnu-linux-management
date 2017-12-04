@@ -19,7 +19,7 @@ Installation solutions
 
 System solutions
 
-* [Set up instruction for a directory structure scheme based on the UNIX methodology.](system/directory-structure-scheme.txt)
+* [A guide for loading and storing user executable files based on the Unix methodology.](system/loading-and-storing-user-executables.txt)
 
 # Contributing
 
