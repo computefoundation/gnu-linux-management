@@ -1,5 +1,5 @@
 
-Simple installation and post-installation instructions for Arch Linux.
+Simple installation and post-installation guide for Arch Linux.
 
 ===========================================================================================================
 

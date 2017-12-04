@@ -13,7 +13,7 @@ These are the section of and solutions provided by Gnu-linux-os:
 
 Installation solutions
 
-* [Simple installation and post-installation instructions for Arch Linux.](installation/arch-linux-install-instructions.txt)
+* [Simple installation and post-installation guide for Arch Linux.](installation/arch-linux-installation-guide.txt)
 
 ## System
 
