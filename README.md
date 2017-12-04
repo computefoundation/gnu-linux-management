@@ -1,5 +1,5 @@
 
-<img src='https://raw.githubusercontent.com/unix-foundation/home/images/gnu-linux_logo.png' width='33.5%' align='left' alt='gnu-linux_logo.png'>
+<img src='https://raw.githubusercontent.com/unix-foundation/gnu-linux/images/logo.png' width='33.5%' align='left' alt='logo.png'>
 <br><br><br>
 
 **Gnu-linux** is a resource of UNIX-founded solutions for the GNU/Linux operating system. It provides documentation for multiple areas of the GNU/Linux operating system to make these areas easily usable.
