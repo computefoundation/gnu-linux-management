@@ -1,4 +1,4 @@
 
 # file_management/
 
-File management instructions text files.
+This directory contains file management documentation
