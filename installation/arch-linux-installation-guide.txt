@@ -1,17 +1,17 @@
 
 Simple installation and post-installation guide for Arch Linux.
 
+This guide is meant to be a simplified alternative to the Arch Linux Beginner's Guide wiki page.
+
 ===========================================================================================================
 
 =======================================
    Installation
 =======================================
 
-++SYSTEM
-
-  Follow instructions on the Arch Linux Beginner's Guide wiki page or use the following steps.
++++SYSTEM
   
-  ~~~~ SET UP AND BOOT INSTALLATION MEDIA
+  --- SET UP AND BOOT INSTALLATION MEDIA
    -Download the Arch Linux ISO and copy it to a storage media like a flash drive. (See
     https://wiki.archlinux.org/index.php/USB_flash_installation_media#In_Windows)
 
@@ -20,7 +20,7 @@ Simple installation and post-installation guide for Arch Linux.
 
    -Connect the computer to the internet via ethernet and boot Arch Linux using the storage media.
 
-  ~~~~ PREPARE STORAGE DEVICE
+  --- PREPARE STORAGE DEVICE
    (Note: This is probably the hardest part in the installation guide and may require some extra research).
    -Create the correct partitions using a partitioning tool if not already created (see the Arch Linux wiki for
     partitioning tools; possibly the easiest one to use is fdisk). Print the current partitions on the drive with
@@ -47,96 +47,98 @@ Simple installation and post-installation guide for Arch Linux.
        >  mkdir -p /mnt/home
        >  mount /dev/sdxY /mnt/home
 
-  ~~~~ INSTALL ARCH LINUX BASE PACKAGE
+  --- INSTALL ARCH LINUX BASE PACKAGE
    -Run the following (use -i option to ensure prompting before package installation):
        >  pacstrap /mnt base base-devel
 
    -If an error occurs regarding keys, run the following and rerun the previous command:
        >  pacman -Sy archlinux-keyring
 
-  ~~~~ CONFIGURATION
-   FSTAB
-    -Generate fstab:
-        >  genfstab -U /mnt > /mnt/etc/fstab
+  --- CONFIGURATION
+    1. FSTAB
+     -Generate fstab:
+         >  genfstab -U /mnt > /mnt/etc/fstab
 
-   CHROOT
-    -Chroot to the new system:
-        >  arch-chroot /mnt /bin/bash
+    2. CHROOT
+     -Chroot to the new system:
+         >  arch-chroot /mnt /bin/bash
 
-   INSTALL VIM TEXT EDITOR (OPTIONAL; CAN BE USED OVER NANO IN THE NEXT STEPS)
-        >  pacman -S vim
+    3. VIM TEXT EDITOR (OPTIONAL; CAN BE USED OVER NANO IN THE NEXT STEPS)
+         >  pacman -S vim
 
-   LOCALE
-    -Edit /etc/locale.gen and uncomment "en_US.UTF-8 UTF-8".
+    4. LOCALE
+     -Edit /etc/locale.gen and uncomment "en_US.UTF-8 UTF-8".
 
-    -Run the following:
-        >  locale-gen
+     -Run the following:
+         >  locale-gen
 
-    -Add "LANG=en_US.UTF-8" to /etc/locale.conf where LANG is the first column of an uncommented entry in /etc/locale.gen:
-        >  echo "LANG=en_US.UTF-8" > /etc/locale.conf
+     -Add "LANG=en_US.UTF-8" to /etc/locale.conf where LANG is the first column of an uncommented entry in
+      /etc/locale.gen:
+         >  echo "LANG=en_US.UTF-8" > /etc/locale.conf
 
-   TIME
-    -Select a time zone:
-        >  tzselect
+    5. TIME
+     -Select a time zone:
+         >  tzselect
 
-    -Create the symbolic link /etc/localtime, where Zone/Subzone is the TZ value from tzselect:
-        >  ln -s /usr/share/zoneinfo/Zone/SubZone /etc/localtime
+     -Create the symbolic link /etc/localtime, where Zone/Subzone is the TZ value from tzselect:
+         >  ln -s /usr/share/zoneinfo/Zone/SubZone /etc/localtime
 
-    -Adjust the time skew and set the time standard to UTC:
-        >  hwclock --systohc --utc
+     -Adjust the time skew and set the time standard to UTC:
+         >  hwclock --systohc --utc
 
-   GRUB BOOT LOADER
-    (To use a specific boot loader for UEFI/GPT, continue to the UEFI/GPT boot loader section).
+    6. GRUB BOOT LOADER
+     (To use a specific boot loader for UEFI/GPT, continue to the UEFI/GPT boot loader section).
 
-    -Install the grub package. To search for other operating systems, also install os-prober:
-        >  pacman -S grub os-prober
+     -Install the grub package. To search for other operating systems, also install os-prober:
+         >  pacman -S grub os-prober
 
-    -Install the bootloader to the drive Arch was installed to (if this does not work, follow the steps under GRUB BOOT
-     LOADER in the TROUBLESHOOTING section):
-        >  grub-install --recheck /dev/sda
+     -Install the bootloader to the drive Arch was installed to (if this does not work, follow the steps under GRUB
+      BOOT LOADER in the TROUBLESHOOTING section):
+         >  grub-install --recheck /dev/sda
 
-    -Generate grub.cfg:
-        >  grub-mkconfig -o /boot/grub/grub.cfg
+     -Generate grub.cfg:
+         >  grub-mkconfig -o /boot/grub/grub.cfg
 
-   ALTERNATE BOOT LOADER FOR UEFI/GPT
-    -Run the following:
-        >  bootctl install
+    7. ALTERNATE BOOT LOADER FOR UEFI/GPT
+     -Run the following:
+         >  bootctl install
 
-    -Create a boot entry in /boot/loader/entries/arch.conf, replacing /dev/sda2 with the root partition:
-         title          Arch Linux
-         linux          /vmlinuz-linux
-         initrd         /initramfs-linux.img
-         options        root=/dev/sda2 rw
+     -Create a boot entry in /boot/loader/entries/arch.conf, replacing /dev/sda2 with the root partition:
+          title          Arch Linux
+          linux          /vmlinuz-linux
+          initrd         /initramfs-linux.img
+          options        root=/dev/sda2 rw
 
-    -Modify /boot/loader/loader.conf to select the default entry (without .conf) suffix:
-         timeout 3
-         default arch
+     -Modify /boot/loader/loader.conf to select the default entry (without .conf) suffix:
+          timeout 3
+          default arch
 
-   NETWORK
-    -Choose a hostname for the system and add it in /etc/hostname.
-        >  echo '<hostname>' > /etc/hostname
+    8. NETWORK
+     -Choose a hostname for the system and add it in /etc/hostname.
+         >  echo '<hostname>' > /etc/hostname
 
-    -Append the same hostname to localhost entries in /etc/hosts (i.e. add it after the last "localhost" in each line).
+     -Append the same hostname to localhost entries in /etc/hosts (i.e. add it after the last "localhost" in each
+      line).
 
-    -Get interface device names:
-        >  ls /sys/class/net
+     -Get interface device names:
+         >  ls /sys/class/net
 
-    -Enable the dhcpcd service for the wired connection:
-        >  systemctl enable dhcpcd@<interface>.service
+     -Enable the dhcpcd service for the wired connection:
+         >  systemctl enable dhcpcd@<interface>.service
 
-   FINISH AND REBOOT
-    -Set the root password:
-        >  passwd
+    9. FINISH AND REBOOT
+     -Set the root password:
+         >  passwd
 
-    -Exit from the chroot environment:
-        >  exit
+     -Exit from the chroot environment:
+         >  exit
 
-    -Reboot the computer:
-        >  reboot
+     -Reboot the computer:
+         >  reboot
 
-++TROUBLESHOOTING
++++TROUBLESHOOTING
 
-   ~~~~ GRUB BOOT LOADER
+   --- GRUB BOOT LOADER
     -Install "efibootmgr" and create the "efi" directory under /boot:
         >  pacman -S efibootmgr && mkdir /boot/efi.
 
@@ -152,9 +154,9 @@ Simple installation and post-installation guide for Arch Linux.
    Post-installation
 =======================================
 
-++PART 1: SYSTEM INITIALIZATION
++++PART 1: SYSTEM INITIALIZATION
 
-  ~~~~ Set up
+  --- SET UP
    -Edit /etc/pacman.conf and uncomment the following lines:
          #[multilib]
          #Include = /etc/pacman.d/mirrorlist
@@ -174,13 +176,13 @@ Simple installation and post-installation guide for Arch Linux.
    -Disable the PC speaker from making loud beeps (optional; reboot is required):
        >  echo 'blacklist pcspkr' > /etc/modprobe.d/blacklist.conf
 
-   -Create the system user:
-       >  useradd -m -G storage,power,wheel <user(name)>
+   -Create the primary system user:
+       >  useradd -m -G storage,power,wheel <username>
 
-   -Set the user password:
+   -Set the primary system user's password:
        >  passwd <user>
 
-  ~~~~ Initial applications and drivers
+  --- INITIAL APPLICATIONS AND DRIVERS
    -Install the following basic applications (Estimated time: 4 minutes):
        >  pacman -S gedit xclip wget rfkill chromium
 
@@ -189,9 +191,9 @@ Simple installation and post-installation guide for Arch Linux.
       -xf86-video-ati (AMD/ATI graphic cards)
       -xf86-video-nouveau (NVIDIA graphics card; consider also the proprietary driver)
 
-++PART 2: GRAPHICAL USER INTERFACE
++++PART 2: GRAPHICAL USER INTERFACE
 
-  ~~~~ Xorg and Xfce4
+  --- XORG AND XFCE4
    -Install Xorg:
        >  pacman -S xorg-server xorg-xinit alsa-utils
 
@@ -213,30 +215,30 @@ Simple installation and post-installation guide for Arch Linux.
 
    -Open a terminal emulator; this can be done from the applications menu or right clicking on the desktop.
 
-  ~~~~ Device mounting and automounting
+  --- DEVICE MOUNTING AND AUTOMOUNTING
    -Install device mounting and automounting software:
        >  pacman -S --noconfirm udisks2 udiskie
 
-++PART 3: SYSTEM CONFIGURATION
++++PART 3: SYSTEM CONFIGURATION
 
-  ~~~~ Raise kernel inotify watch limit (optional):
+  --- RAISE KERNEL INOTIFY WATCH LIMIT (OPTIONAL)
    -Log in as root (with 'sudo -i') and run the following:
        >  echo 524288 | tee /proc/sys/fs/inotify/max_user_watches
 
-++PART 4: SYSTEM SOFTWARE
++++PART 4: SYSTEM SOFTWARE
 
-  ~~~~ Bypass GRUB menu on boot (optional; this allows Grub to instantly boot to Arch Linux and skip the menu)
+  --- BYPASS GRUB MENU ON BOOT (OPTIONAL; THIS ALLOWS GRUB TO INSTANTLY BOOT TO ARCH LINUX AND SKIP THE MENU)
    -Run the following as a regular (non-root) user:
        >  cd /tmp && wget https://aur.archlinux.org/cgit/aur.git/snapshot/grub-holdshift.tar.gz && tar -xzf grub-holdshift.tar.gz && cd grub-holdshift && makepkg -s && sudo pacman -U --noconfirm $PWD/grub-holdshift-*-any.pkg.tar.xz && sudo grub-mkconfig -o /boot/grub/grub.cfg
 
-  ~~~~ Yaourt (Yet AnOther User Repository Tool)
+  --- YAOURT (Yet AnOther User Repository Tool)
    -Install package-query first (run as regular user):
        >  cd /tmp && wget https://aur.archlinux.org/cgit/aur.git/snapshot/package-query.tar.gz && tar -xzf package-query.tar.gz && cd package-query/ && makepkg -s --noconfirm && sudo pacman -U --noconfirm $PWD/package-query-*-x86_64.pkg.tar.xz
 
    -Install yaourt (run as regular user):
        >  cd /tmp && wget https://aur.archlinux.org/cgit/aur.git/snapshot/yaourt.tar.gz && tar -xzf yaourt.tar.gz && cd yaourt/ && makepkg -s && sudo pacman -U --noconfirm $PWD/yaourt-*-any.pkg.tar.xz
 
-  ~~~~ JDK
+  --- JDK
    -Install JDK 7:
        >  yaourt -S --noconfirm jdk7
 
@@ -246,35 +248,35 @@ Simple installation and post-installation guide for Arch Linux.
    -Change default Java environment to JDK 7 (or JDK 8 if preferred):
        >  archlinux-java set java-7-jdk
 
-  ~~~~ Python
+  --- PYTHON
    -Install python pip package management system:
      >  pacman -S --noconfirm python-pip
 
-  ~~~~ Networking
+  --- NETWORKING
    -Install basic network applications and utilities:
        >  pacman -S --noconfirm wpa_supplicant networkmanager network-manager-applet
 
    -Enable Network Manager's service (run as root):
        >  systemctl enable NetworkManager.service && systemctl start NetworkManager.service
 
-++PART 5: DRIVER INSTALLATION (Examples only)
++++PART 5: DRIVER INSTALLATION (EXAMPLES ONLY)
 
-  ~~~~ TP-Link AC1200 Wi-Fi Adapter
+  --- TP-LINK AC1200 WI-FI ADAPTER
    -Install the Realtek 8812au chipset driver:
        >  yaourt -S --noconfirm rtl8812au
 
-  ~~~~ Intel® Dual Band Wireless-N 7265 Card
+  --- INTEL® DUAL BAND WIRELESS-N 7265 CARD
    -Run the following as root:
        >  cd /tmp && wget https://wireless.wiki.kernel.org/_media/en/users/drivers/iwlwifi-3160-ucode-25.17.12.0.tgz && tar -zxf iwlwifi-3160-ucode-25.17.12.0.tgz && cd iwlwifi-3160-ucode-25.17.12.0 && cp iwlwifi-*.ucode /lib/firmware
 
-++PART 6: TROUBLESHOOTING
++++PART 6: TROUBLESHOOTING
 
-  ~~~~ Laptop touchpad (synaptics interface) not working
+  --- LAPTOP TOUCHPAD (SYNAPTICS INTERFACE) NOT WORKING
    -Run the following as root:
        >  pacman -S --noconfirm xf86-input-synaptics
    -See the Arhc Linux synaptic wiki page on setting up the following file: /etc/X11/xorg.conf.d/50-synaptics.conf
 
-  ~~~~ Sound not working
+  --- SOUND NOT WORKING
    -Create file "/etc/modprobe.d/alsa.conf" and add the following lines:
         options snd_hda_intel enable=0,1
         options snd slots=snd_hda_intel,thinkpad_acpi
