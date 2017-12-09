@@ -1,23 +1,23 @@
 
-<img src='https://raw.githubusercontent.com/unixfoundation/gnu-linux-os/images/logo.png' width='33.5%' align='left' alt='logo.png'>
-<br><br><br>
+<img src='https://raw.githubusercontent.com/unixfoundation/os/images/logo.png' width='33.5%' align='left' alt='logo.png'>
+<br><br>
 
-**Gnu-linux-os** is a resource of Unix-founded documentation for the GNU/Linux operating system. It provides documentation for multiple areas of the GNU/Linux operating system to make these areas easily usable.
-<br><br><br><br>
+**Os** is a resource of Unix-founded solutions for the GNU/Linux operating system. It targets multiple parts of an operating system.
+<br><br><br><br><br>
 
-# Sections
+# Operating system parts
 
-These are the section of and documentation provided by Gnu-linux-os:
+Os provides solutions for the following operating system parts:
 
 ## Installation
 
-Installation documentation
+Installation solutions
 
 * [Simple installation and post-installation guide for Arch Linux.](installation/arch-linux-installation-guide.txt)
 
 ## File management
 
-File management documentation
+File management solutions
 
 * [A guide for loading and storing user executable files based on the Unix methodology.](file_management/loading-and-storing-user-executables.txt)
 
