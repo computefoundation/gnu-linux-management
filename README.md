@@ -13,7 +13,7 @@ Os provides solutions for the following operating system parts:
 
 Installation solutions
 
-* [Simple installation and post-installation guide for Arch Linux.](installation/arch-linux-installation-guide.txt)
+* [Installation and post-installation guide for Arch Linux.](installation/arch-linux-installation-guide.txt)
 
 ## File management
 

@@ -1,7 +1,7 @@
 
-Simple installation and post-installation guide for Arch Linux.
+Installation and post-installation guide for Arch Linux.
 
-This guide is meant to be a simplified alternative to the Arch Linux Beginner's Guide wiki page.
+This guide is intended to be a simplified alternative to the Arch Linux Beginner's Guide wiki.
 
 ===========================================================================================================
 
