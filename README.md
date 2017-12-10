@@ -13,19 +13,19 @@ Os provides solutions for the following operating system components:
 
 Device management solutions
 
-* [Instructions on creating a udev rule for a USB device.](device_management/create-usb-device-udev-rule-instructions.txt)
+* [Instructions on creating a udev rule for a USB device](device_management/create-usb-device-udev-rule-instructions.txt)
 
 ## File management
 
 File management solutions
 
-* [A guide for loading and storing user executable files based on the Unix methodology.](file_management/loading-and-storing-user-executables.txt)
+* [A guide for loading and storing user executable files based on the Unix methodology](file_management/loading-and-storing-user-executables.txt)
 
 ## Installation
 
 Installation solutions
 
-* [Installation and post-installation guide for Arch Linux.](installation/arch-linux-installation-guide.txt)
+* [Installation and post-installation guide for Arch Linux](installation/arch-linux-installation-guide.txt)
 
 # Contributing
 

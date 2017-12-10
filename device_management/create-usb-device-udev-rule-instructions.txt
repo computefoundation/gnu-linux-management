@@ -1,5 +1,5 @@
 
-Instructions on creating a udev rule for a USB device.
+Instructions on creating a udev rule for a USB device
 
 ===========================================================================================================
 
