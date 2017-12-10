@@ -7,7 +7,7 @@
 
 # Operating system components
 
-Os provides solutions for the following operating system components:
+Os provides the following solutions in each of the following operating system components:
 
 ## Device management
 
