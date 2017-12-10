@@ -1,0 +1,91 @@
+
+Instructions on creating a udev rule for a USB device.
+
+===========================================================================================================
+
+=======================================
+   Create rule
+=======================================
+
+1. Get the info of all devices with "lsusb" and find the correct device.
+
+      Example:
+        "Bus 001 Device 004: ID 47c9:7b13 Motorola PCS"
+        bus: 001
+        device: 004
+        idVendor: 47c9
+        idProduct: 7b13
+
+2. Create a udev rules file in /etc/udev/rules.d (e.g. 55-mydevice.rules).
+
+3. Add the following rule in the file using the information from "lsusb" (Note: SYMLINK is used to create a symlink to
+   the device in /dev. In this case, the symlink created is "/dev/android1"):
+
+      SUBSYSTEM=="usb", ATTR{idVendor}=="47c9", ATTR{idProduct}=="7b13",
+      MODE="0550", GROUP="systmdev", OWNER="<user>", SYMLINK+="android%n"
+
+3. Use the following instead to run a script when the USB device is connected:
+
+      SUBSYSTEM=="usb", ATTR{idVendor}=="47c9", ATTR{idProduct}=="7b13",
+      RUN+="/path/to/script.sh"
+
+=======================================
+   Commands for testing rules
+=======================================
+
+•Run the following to test a udev rule (Note: This will show the effects of everything except for RUN [must
+ use "udevadm trigger" instead]. It will also remove any old symlink that has been changed):
+
+      sudo udevadm test "$(udevadm info -q path -n /dev/bus/usb/<device_directory>)" 2>&1
+
+•Run the following to force udev to trigger all rules (Note: This does not update the SYMLINK keys and does run the
+ command in RUN for all udev rules):
+
+      sudo udevadm trigger
+
+•Run the following to reload all udev rules (not necessary after creating a new udev rule file as udev automatically
+ detects file changes):
+
+      sudo udevadm control --reload
+
+=======================================
+   Additional commands
+=======================================
+
+•Run the following to list all possible attributes that can be used for a device:
+
+      udevadm info -a -p "$(udevadm info -q path -n /dev/bus/usb/<device_directory>)"
+
+=======================================
+   Notes
+=======================================
+
+•A udev rule will run several times (e.g. over 100) for some USB devices connected during the boot process, 
+ causing the command defined in the key RUN to run that many times. Also, if the "%n" modifier in SYMLINK is used, it
+ will create several symlinks (e.g. about 50) for the device, each with an incremented number appended. If
+ ENV{DEVTYPE}=="usb_device" is added, the udev rule will run a fraction of the number of times and create only a fraction of the symlinks. It should be added for usb devices as it speeds up the boot process.
+
+•To limit the number of times a command defined in key RUN runs to about once, create a container script with the
+ following code:
+
+      numProcsOpen="$(ps aux | grep -v 'grep profile/' | grep profile/mobiledevconnected.sh | wc -l)"
+
+      if [ "${numProcsOpen}" -lt 3 ]; then
+        # higher chance of "${numProcsOpen}" being less than 3 more than twice if it is lower than 2
+        sleep 2
+
+        runMainCmds
+      fi
+
+ Note: Several other methods have been tried to make a udev rule run once for a USB device that is connected during
+ the boot process, including the use of a lock directory and modifying SIGCONT/SIGSTOP.
+
+=======================================
+   Website references
+=======================================
+
+https://wiki.debian.org/udev
+http://www.reactivated.net/writing_udev_rules.html#example-printer
+http://www.janosgyerik.com/adding-udev-rules-for-usb-debugging-android-devices/
+https://wiki.archlinux.org/index.php/udev
+
