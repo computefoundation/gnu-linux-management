@@ -3,58 +3,53 @@ Instructions on creating a udev rule for a USB device
 
 ===========================================================================================================
 
-=======================================
-   Create rule
-=======================================
-
 1. Get the info of all devices with "lsusb" and find the correct device.
 
       Example:
         "Bus 001 Device 004: ID 47c9:7b13 Motorola PCS"
-        bus: 001
-        device: 004
-        idVendor: 47c9
-        idProduct: 7b13
+            bus: 001
+            device: 004
+            id vendor: 47c9
+            id product: 7b13
 
-2. Create a udev rules file in /etc/udev/rules.d (e.g. 55-mydevice.rules).
+2. Create a udev rules file in /etc/udev/rules.d (e.g. 55-mydevice.rules). Note that all rules files are collectively 
+   sorted and processed in lexical order.
 
-3. Add the following rule in the file using the information from "lsusb" (Note: SYMLINK is used to create a symlink to 
-   the device in /dev. In this case, the symlink created is "/dev/android1"):
+3. Add the following rule in the file for a USB device using permissions 0550, group "systmdev" and the information 
+   from "lsusb" (Note: SYMLINK is used to create a symlink to the device in /dev. E.g., the value "android%n" will
+   create symlink "/dev/android1"):
 
-      SUBSYSTEM=="usb", ATTR{idVendor}=="47c9", ATTR{idProduct}=="7b13",
-      MODE="0550", GROUP="systmdev", OWNER="<user>", SYMLINK+="android%n"
+      SUBSYSTEM=="usb", ATTR{idVendor}=="<id_vendor>", ATTR{idProduct}=="<id_product>", MODE="0550",
+      GROUP="systmdev", OWNER="<user>", SYMLINK+="<symlink>"
 
-3. Use the following instead to run a script when the USB device is connected:
+   Use the following instead to run a command when the USB device is connected:
 
-      SUBSYSTEM=="usb", ATTR{idVendor}=="47c9", ATTR{idProduct}=="7b13",
-      RUN+="/path/to/script.sh"
-
-=======================================
-   Commands for testing rules
-=======================================
-
-•Run the following to test a udev rule (Note: This will show the effects of everything except for RUN [must 
- use "udevadm trigger" instead]. It will also remove any old symlink that has been changed):
-
-      sudo udevadm test "$(udevadm info -q path -n /dev/bus/usb/<device_directory>)" 2>&1
-
-•Run the following to force udev to trigger all rules (Note: This does not update the SYMLINK keys and does run the 
- command in RUN for all udev rules):
-
-      sudo udevadm trigger
-
-•Run the following to reload all udev rules (not necessary after creating a new udev rule file as udev automatically 
- detects file changes):
-
-      sudo udevadm control --reload
+      SUBSYSTEM=="usb", ATTR{idVendor}=="<id_vendor>", ATTR{idProduct}=="<id_product>", RUN+="<command>"
 
 =======================================
-   Additional commands
+   Commands
 =======================================
 
-•Run the following to list all possible attributes that can be used for a device:
+# GENERAL
 
-      udevadm info -a -p "$(udevadm info -q path -n /dev/bus/usb/<device_directory>)"
+# List the udev attributes for a device.
+# Example device names: "/dev/sda1"; "/dev/bus/usb/<device_directory>"
+udevadm info -a -p "$(udevadm info -q path -n '<device name>')"
+
+# Reload all udev rules.
+# Note: This is not necessary after creating a new udev rule file as udev automatically detects file changes.
+sudo udevadm control --reload
+
+# TESTING UDEV RULES
+
+# Test a udev rule.
+# Note: This shows the effects of all keys of a rule except for RUN. To also see the effects of RUN, use 
+#   "udevadm trigger" instead. This also removes old symlinks that have been changed.
+sudo udevadm test "$(udevadm info -q path -n /dev/bus/usb/<device_directory>)" 2>&1
+
+# Force udev to trigger all rules
+# Note: This does not update smylinks or run the command in RUN.
+sudo udevadm trigger
 
 =======================================
    Notes
@@ -75,7 +70,7 @@ Instructions on creating a udev rule for a USB device
         # higher chance of "${numProcsOpen}" being less than 3 more than twice if it is lower than 2
         sleep 2
 
-        runMainCmds
+        ...user commands...
       fi
 
  Note: Several other methods have been tried to make a udev rule run once for a USB device that is connected during 
