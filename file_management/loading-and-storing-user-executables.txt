@@ -7,42 +7,41 @@ A guide for loading and storing user executable files based on the Unix methodol
    Loading
 =======================================
 
-There are few different ares of the GNU/Linux operating system to consider when loading executables (e.g. scripts). 
-These include coniguration files in /etc, systemd files, etc.
+There are few different ares of the GNU/Linux operating system to consider when loading executable files (e.g. 
+scripts). These include coniguration files in /etc, systemd files, etc.
 
-In regards to user executables, there are only two files the user should consider:
+In regards to user executable files, there are only two files the user should consider:
 
   1. Bash profile file - .bash_profile (loaded for a login shell)
   2. Bash runtime configuration file - .bashrc (loaded for an interactive non-login shell)
 
-The most important variable defined in these files with respect to executables is the PATH environment variable. It 
-should be used to load all of a users executables not being loaded directly by aliases or functions.
+The most important variable defined in these files with respect to user executable files is the PATH environment 
+variable. It should be used to load all of a user's executable files not being used directly by aliases or functions.
 
 The significant difference between defining the PATH environment variable in .bash_profile and .bashrc is how the 
-executables are accessible in X11 (i.e. graphical user interface). Executables saved in the PATH environment variable 
-in .bash_profile will be available within the entire X11 protocol (i.e. throughout the window manager, in other 
-applications, new processes, etc.). Executables saved in the PATH environment variable in .bashrc will only be
-available in the terminal.
+executable files are accessible in the X Window System. Executables saved in the PATH environment variable in 
+.bash_profile will be available within the entire X Window System protocol (i.e. throughout the window manager, in 
+other applications, new processes, etc.). Executables saved in the PATH environment variable in .bashrc will be 
+available only in the terminal.
 
 =======================================
    Storing
 =======================================
 
-Just as there are only two files the user should consider for loading user executables, there are only two directories 
-to consider for storing user executables:
+Just as there are only two files the user should consider for loading user executable files, there are only two 
+directories to consider for storing user executable files:
 
   1. /usr/local
   2. /home/<user>
 
 The context level of these directories almost correspond with the context level of the .bash_profile and .bashrc 
 files. /usr/local is a system-user-wide directory just as .bash_profile is a system-user-wide file. /home/<user> is a 
-user-wide directory just as .bashrc is a user-wide file. As a result, executables saved in the PATH environment 
-variable in .bash_profile should be stored in /usr/local/bin and executables saved in the PATH environment variable in 
-.bashrc should be stored in /home/<user>/bin.
+user-wide directory just as .bashrc is a user-wide file. As a result, executable files saved in the PATH environment 
+variable in .bash_profile should be stored in /usr/local/bin and executable files saved in the PATH environment 
+variable in .bashrc should be stored in /home/<user>/bin.
 
 To stay completely consistent with the Unix methodology, the user should create the Unix directory filesystem in 
-/home/<user> and place all non-executables in their respective directory. This directory filesystem looks like the 
-following:
+/home/<user> and place files in their respective directory. This directory filesystem looks like the following:
 
   * /home/<user>/bin
   * /home/<user>/tmp
