@@ -87,7 +87,7 @@ This guide is intended to be a simplified alternative to the Arch Linux Beginner
          >  hwclock --systohc --utc
 
     6. GRUB BOOT LOADER
-     (To use a specific boot loader for UEFI/GPT, continue to the UEFI/GPT boot loader section).
+     (To use a specific boot loader for UEFI/GPT, continue to the next step).
 
      -Install the grub package. To search for other operating systems, also install os-prober:
          >  pacman -S grub os-prober
