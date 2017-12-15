@@ -13,19 +13,25 @@ Os provides the following solutions in each of the following operating system co
 
 Device management solutions
 
-* [Instructions on creating a udev rule for a USB device](device_management/create-usb-device-udev-rule-instructions.txt)
+### System configuration
+
+* [Instructions on creating a udev rule for a USB device](device_management/system_configuration/create-usb-device-udev-rule-instructions.txt)
 
 ## File management
 
 File management solutions
 
-* [A guide for loading and storing user executable files based on the Unix methodology](file_management/loading-and-storing-user-executables.txt)
+### Environment
+
+* [A guide for loading and storing user executable files based on the Unix methodology](file_management/environment/loading-and-storing-user-executables.txt)
 
 ## Installation
 
 Installation solutions
 
-* [Installation and post-installation guide for Arch Linux](installation/arch-linux-installation-guide.txt)
+### General
+
+* [Installation and post-installation guide for Arch Linux](installation/general/arch-linux-installation-guide.txt)
 
 # Contributing
 
