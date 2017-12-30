@@ -2,10 +2,10 @@
 <img src='https://raw.githubusercontent.com/unixfoundation/os/images/logo.png' width='33.5%' align='left' alt='logo.png'>
 <br><br>
 
-**Os** is a resource of Unix-founded solutions for the GNU/Linux operating system. It targets multiple components of an operating system.
+**Os** is a resource of Unix-founded solutions for the GNU/Linux operating system targeting multiple components of it.
 <br><br><br><br><br>
 
-# Operating system components
+# GNU/Linux components
 
 Os provides the following solutions in each of the following operating system components:
 
