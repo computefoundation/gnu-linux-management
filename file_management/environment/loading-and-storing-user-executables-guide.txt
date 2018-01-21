@@ -1,5 +1,5 @@
 
-A guide for loading and storing user executable files based on the Unix methodology
+A guide for loading and storing user executable files with the Unix methodology
 
 ===========================================================================================================
 
