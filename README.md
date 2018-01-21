@@ -2,12 +2,12 @@
 <img src='https://raw.githubusercontent.com/unixfoundation/os/images/logo.png' width='33.5%' align='left' alt='logo.png'>
 <br><br>
 
-**Os** is a resource of Unix-founded solutions for the GNU/Linux operating system for multiple components.
+**Os** is a resource of Unix-founded document solutions for GNU/Linux in all areas.
 <br><br><br><br><br>
 
-# GNU/Linux components
+# Areas
 
-Os provides the following solutions for each of the following components:
+**Os** currently provides the following solutions in the following areas:
 
 ## Device management
 
