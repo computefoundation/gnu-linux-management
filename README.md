@@ -31,7 +31,7 @@ Installation solutions
 
 ### General
 
-* [Installation and post-installation guide for Arch Linux](installation/general/arch-linux-installation-guide.txt)
+* [Generic installation and post-installation instructions for Arch Linux](installation/general/arch-linux-installation-instructions.txt)
 
 # Contributing
 
