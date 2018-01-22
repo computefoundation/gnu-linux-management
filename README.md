@@ -9,29 +9,23 @@
 
 **Os** currently provides the following solutions in the following areas:
 
-## Device management
+## General
 
-Device management solutions
+### Installation
 
-### System configuration
+* [Generic installation and post-installation instructions for Arch Linux](general/installation/arch-linux-installation-instructions.txt)
 
-* [Instructions on creating a udev rule for a USB device](device_management/system_configuration/create-usb-device-udev-rule-instructions.txt)
+## User environment
 
-## File management
+### File management
 
-File management solutions
+* [A guide for loading and storing user executable files with the Unix methodology](user_environment/file_management/loading-and-storing-user-executables-guide.txt)
 
-### Environment
+## System
 
-* [A guide for loading and storing user executable files with the Unix methodology](file_management/environment/loading-and-storing-user-executables-guide.txt)
+### Device management
 
-## Installation
-
-Installation solutions
-
-### General
-
-* [Generic installation and post-installation instructions for Arch Linux](installation/general/arch-linux-installation-instructions.txt)
+* [Instructions on creating a udev rule for a USB device](system/device_management/create-usb-device-udev-rule-instructions.txt)
 
 # Contributing
 
