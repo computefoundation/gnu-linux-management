@@ -1,13 +1,13 @@
 
-<img src='https://raw.githubusercontent.com/unixfoundation/os/images/logo.png' width='33.5%' align='left' alt='logo.png'>
+<img src='https://raw.githubusercontent.com/unixfoundation/gnu-linux/images/logo.png' width='33.5%' align='left' alt='logo.png'>
 <br><br>
 
-**Os** is a resource of Unix-founded document solutions for GNU/Linux in all areas.
+**Gnu-linux** is a resource of Unix-founded document solutions for GNU/Linux in all areas.
 <br><br><br><br><br>
 
 # Areas
 
-**Os** currently provides the following solutions in the following areas:
+**Gnu-linux** currently provides the following solutions in the following areas:
 
 ## General
 
