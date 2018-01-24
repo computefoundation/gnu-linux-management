@@ -1,5 +1,5 @@
 
-<img src='https://raw.githubusercontent.com/unixfoundation/gnu-linux/images/logo.png' width='33.5%' align='left' alt='logo.png'>
+<img src='https://raw.githubusercontent.com/computingfoundation/gnu-linux/images/logo.png' width='33.5%' align='left' alt='logo.png'>
 <br><br>
 
 This is a resource of Unix-founded document solutions for GNU/Linux in all areas.
@@ -33,6 +33,6 @@ If you would like to contribute, please ensure that your contribution is correct
 
 Credits will be placed in the wiki.
 
-Please send an email to main@unixfoundation.org with any suggestions, comments or questions.
+Please send an email to main@computingfoundation.org with any suggestions, comments or questions.
 
 Thanks.
