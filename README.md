@@ -1,13 +1,14 @@
 
-<img src='https://raw.githubusercontent.com/computingfoundation/gnu-linux/images/logo.png' width='33.5%' align='left' alt='logo.png'>
-<br><br>
+<div align='center'>
+	<img src='https://raw.githubusercontent.com/computingfoundation/gnu-linux/images/logo.png' width='40%' alt='logo.png'>
+</div>
+<br><br><br>
 
 This is a resource of Unix-founded document solutions for GNU/Linux in all areas.
-<br><br><br><br><br>
 
 # Areas
 
-This repository currently provides the following solutions in the following areas:
+It currently provides the following solutions in the following areas:
 
 ## General
 
