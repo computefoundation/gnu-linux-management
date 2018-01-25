@@ -4,7 +4,7 @@
 </div>
 <br><br><br>
 
-This is a resource of Unix-founded document solutions for GNU/Linux in all areas.
+**Gnu-linux** is a resource of Unix-founded document solutions to GNU/Linux operating system problems.
 
 # Areas
 
