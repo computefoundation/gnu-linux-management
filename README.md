@@ -1,14 +1,14 @@
 
 <div align='center'>
-	<img src='https://raw.githubusercontent.com/computingfoundation/gnu-linux/images/logo.png' width='40%' alt='logo.png'>
+	<img src='https://raw.githubusercontent.com/computingfoundation/gnu-linux-operating-system-management/images/logo.png' width='40%' alt='logo.png'>
 </div>
 <br><br><br>
 
-**Gnu-linux** is a resource of Unix-founded document solutions to GNU/Linux operating system problems.
+**Gnu-linux-operating-system-management** is a resource of document solutions to foundational GNU/Linux operating system management problems.
 
-# Areas
+# GNU/Linux operating system areas
 
-It currently provides the following solutions in the following areas:
+It currently provides the following solutions in the following GNU/Linux operating system areas:
 
 ## General
 
