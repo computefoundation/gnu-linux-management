@@ -4,7 +4,7 @@
 </div>
 <br><br><br>
 
-**Gnu-linux-operating-system-management** is a resource of document solutions to foundational GNU/Linux operating system management problems.
+**Gnu-linux-management** is a resource of foundational GNU/Linux management document solutions.
 
 # GNU/Linux operating system areas
 
