@@ -4,7 +4,7 @@
 </div>
 <br><br><br>
 
-**Gnu-linux-management** is a resource of document solutions functioning as a foundation for GNU/Linux management.
+**Gnu-linux-management** is a foundation for GNU/Linux management.
 
 # GNU/Linux operating system areas
 
